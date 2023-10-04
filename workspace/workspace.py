@@ -1,9 +1,9 @@
 import json
-import modules.paths_internal
 import os.path
 from dataclasses import dataclass, field
 from modules.ui import paste_symbol, save_style_symbol
 from modules.ui_components import ToolButton
+from modules.scripts import basedir
 from .util import *
 
 
@@ -12,7 +12,7 @@ class StableDiffusionWorkSpace:
     blocks: gr.Blocks = field(default_factory=gr.Blocks, repr=False)
     tabs: list[gr.Tab] = field(default_factory=list, repr=False)
     components: list[gr.components.IOComponent] = field(default_factory=list, repr=False)
-    filename: str = field(default=os.path.join(modules.paths_internal.script_path, 'workspace.json'))
+    filename: str = field(default=os.path.join(basedir(), 'workspace.json'))
 
     def setup_components(self, blocks):
         """
