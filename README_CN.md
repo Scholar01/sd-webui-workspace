@@ -1,8 +1,18 @@
 # sd-webui-workspace
 
+[![GitHub stars](https://img.shields.io/github/stars/Scholar01/sd-webui-workspace?style=flat-square)](https://github.com/Scholar01/sd-webui-workspace/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Scholar01/sd-webui-workspace?style=flat-square)](https://github.com/Scholar01/sd-webui-workspace/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/Scholar01/sd-webui-workspace?style=flat-square)](https://github.com/Scholar01/sd-webui-workspace/issues)
+[![GitHub issues closed](https://img.shields.io/github/issues-closed/Scholar01/sd-webui-workspace?style=flat-square)](https://github.com/Scholar01/sd-webui-workspace/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub license](https://img.shields.io/github/license/Scholar01/sd-webui-workspace?style=flat-square)](https://github.com/Scholar01/sd-webui-workspace/blob/master/LICENSE.md)
+[![GitHub commits](https://img.shields.io/github/last-commit/Scholar01/sd-webui-workspace?style=flat-square)](https://github.com/Scholar01/sd-webui-workspace/commits/main)
 
 
-![img.png](doc/1.png)
+<div align="center">
+
+[🇺🇸 English](README.MD) | [🇨🇳 简体中文](README_CN.MD) 
+
+</div>
 
 
 sd-webui-workflow 是一个基于 [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
@@ -27,6 +37,9 @@ sd-webui-workflow 是一个基于 [stable-diffusion-webui](https://github.com/AU
   - [注意事项](#注意事项)
 
 ## 特性
+
+![img.png](doc/1.png)
+
 
 - [X] 手动保存和恢复工作区
 - [X] 理论上支持所有的扩展
