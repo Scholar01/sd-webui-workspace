@@ -43,8 +43,8 @@ class StableDiffusionWorkSpace:
 
         quick_settings.parent.__enter__()
 
-        btn_import = ToolButton(value=paste_symbol, elem_id=self.elem_id('import'), tooltip='import workscace')
-        btn_save = ToolButton(value=save_style_symbol, elem_id=self.elem_id('save'), tooltip='save workscace')
+        btn_import = ToolButton(value=paste_symbol, elem_id=self.elem_id('import'), tooltip='import workspace')
+        btn_save = ToolButton(value=save_style_symbol, elem_id=self.elem_id('save'), tooltip='save workspace')
 
         quick_settings.add_child(btn_import)
         quick_settings.add_child(btn_save)
