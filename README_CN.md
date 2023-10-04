@@ -10,7 +10,7 @@
 
 <div align="center">
 
-[🇺🇸 English](README.MD) | [🇨🇳 简体中文](README_CN.MD) 
+[🇺🇸 English](README.md) | [🇨🇳 简体中文](README_CN.md) 
 
 </div>
 
