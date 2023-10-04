@@ -16,7 +16,7 @@
 
 
 
-SD-WebUI Workflow is an expansion based on  [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui),designed to safeguard and rejuvenate your WebUI workspace. It affords a swift safeguarding of your current webui interface and revives it upon subsequent utilization.
+SD-WebUI Workflow is an expansion based on  [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui),designed to save and restore Webui workspace. It can quickly save your current webui interface and restore it the next time you use it.
 
 
 
