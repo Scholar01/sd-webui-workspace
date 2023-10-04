@@ -127,11 +127,16 @@ def component_to_value(component, value):
 
 def flow_to_component(flow):
     value = flow['value']
+    elem_type = flow['elem_type']
 
-    if flow['elem_type'] == 'dataframe':
+    if elem_type == 'dataframe':
         value = DataFrame.from_dict(value)
 
-    if flow['elem_type'] == 'image' and value:
+    if elem_type == 'image' and value:
         value = to_image(value)
+
+    if elem_type == 'gallery' and value:
+        if isinstance(value, list):
+            value = [v['name'] for v in value]
 
     return value
