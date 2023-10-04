@@ -59,15 +59,21 @@ def parse_image(component, value):
         image = value
     else:
         image = value.get('image', None)
-
+    mode = 'RGB'
     if component.type == 'numpy':
-        width = image.shape[1]
-        height = image.shape[0]
-        data = base64.b64encode(image).decode('utf-8')
+        image = PIL.Image.fromarray(image)
+        width = image.width
+        height = image.height
+        mode = image.mode
+        data = base64.b64encode(image.tobytes()).decode('utf-8')
+        # width = image.shape[1]
+        # height = image.shape[0]
+        # data = base64.b64encode(image.tobytes()).decode('utf-8')
 
     elif component.type == 'pil':
         width = image.width
         height = image.height
+        mode = image.mode
         data = base64.b64encode(image.tobytes()).decode('utf-8')
 
     else:
@@ -78,8 +84,9 @@ def parse_image(component, value):
     return {
         'width': width,
         'height': height,
-        'data': data,
         'type': component.type,
+        'mode': mode,
+        'data': data,
     }
 
 
@@ -90,13 +97,12 @@ def to_image(value):
     image = value.get('data', None)
     width = value.get('width', 0)
     height = value.get('height', 0)
-    if type == 'numpy':
+    mode = value.get('mode', 'RGB')
+    if type == 'numpy' or type == 'pil':
         image = base64.b64decode(image)
-        image = np.frombuffer(image)
-
-    elif type == 'pil':
-        image = base64.b64decode(image)
-        image = PIL.Image.frombytes('RGBA', (width, height), image)
+        image = PIL.Image.frombytes(mode, (width, height), image)
+        if type == 'numpy':
+            image = np.asarray(image)
 
     return image
 
